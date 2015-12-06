@@ -31,8 +31,8 @@ gunzip  *.tgz
 tar -xf simpletools-*.tar
 tar -xf simpleutils-*.tar
 tar -xf simplesim-*.tar
-rm *.tar
-rm *.tgz
+#rm *.tar
+#rm *.tgz
 
 ### binutils Compilation ###
 cd binutils-*
