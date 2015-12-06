@@ -18,8 +18,8 @@ sleep 0.5
 zenity --info --text "$TEXT" &
 read -p "Please press ENTREE once the task is done" a
 
-wget http://www.simplescalar.com/downloads/simpletools-2v0.tgz
-wget http://www.simplescalar.com/downloads/simpleutils-2v0.tgz
+wget -t 0 -T 120 http://www.simplescalar.com/downloads/simpletools-2v0.tgz
+wget -t 0 -T 120 http://www.simplescalar.com/downloads/simpleutils-2v0.tgz
 
 gunzip  *.tgz
 tar -xf simpletools-*.tar
