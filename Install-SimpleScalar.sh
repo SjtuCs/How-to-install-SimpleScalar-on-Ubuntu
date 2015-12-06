@@ -10,8 +10,8 @@ export IDIR=$HOME"/SimpleScalar"
 
 mkdir $IDIR
 cp ./simplesim-3v0e.tgz $IDIR
-cp ./simpletools-2v0.tgz $IDIR
-cp ./simpleutils-2v0.tgz $IDIR
+wget -c -t 0 -T 10 -P $IDIR http://www.simplescalar.com/downloads/simpletools-2v0.tgz 
+wget -c -t 0 -T 10 -P $IDIR http://www.simplescalar.com/downloads/simpleutils-2v0.tgz
 
 cd $IDIR
 
