@@ -2,24 +2,30 @@
 # This script can be launch using the command-line "wget https://raw.githubusercontent.com/sdenel/How-to-install-SimpleScalar-on-Ubuntu/master/Install-SimpleScalar.sh && chmod +x Install-SimpleScalar.sh && ./Install-SimpleScalar.sh"
 
 # This is the only line requiring root permission
-sudo apt-get install bison flex gzip gcc-multilib lib32z1 lib32ncurses5 lib32bz2-1.0 zenity xdg-utils make
+# remove "install xdg-utils"
+sudo apt-get install bison flex gzip gcc-multilib lib32z1 lib32ncurses5 lib32bz2-1.0 zenity make
 
 # Will install SimpleScalar in ~/SimpleScalar
 export IDIR=$HOME"/SimpleScalar"
 
 mkdir $IDIR
+cp ./simplesim-3v0e.tgz $IDIR
+cp ./simpletools-2v0.tgz $IDIR
+cp ./simpleutils-2v0.tgz $IDIR
+
 cd $IDIR
 
 # A simple wget commandline would not comply with licences, so SimpleScalar has to be downloaded manually
-TEXT="Thanks to:\n-Accept the licence then download the archive file\n-Place the archive here: "$IDIR"\n-Close your web-browser"
-xdg-open http://www.simplescalar.com/agreement.php3?simplesim-3v0e.tgz &
-echo -e $TEXT
-sleep 0.5
-zenity --info --text "$TEXT" &
-read -p "Please press ENTREE once the task is done" a
 
-wget -c -t 0 -T 10 http://www.simplescalar.com/downloads/simpletools-2v0.tgz
-wget -c -t 0 -T 10 http://www.simplescalar.com/downloads/simpleutils-2v0.tgz
+#TEXT="Thanks to:\n-Accept the licence then download the archive file\n-Place the archive here: "$IDIR"\n-Close your web-browser"
+#xdg-open http://www.simplescalar.com/agreement.php3?simplesim-3v0e.tgz &
+#echo -e $TEXT
+#sleep 0.5
+#zenity --info --text "$TEXT" &
+#read -p "Please press ENTREE once the task is done" a
+
+#wget -c -t 0 -T 10 http://www.simplescalar.com/downloads/simpletools-2v0.tgz
+#wget -c -t 0 -T 10 http://www.simplescalar.com/downloads/simpleutils-2v0.tgz
 
 gunzip  *.tgz
 tar -xf simpletools-*.tar
