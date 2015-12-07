@@ -1,3 +1,6 @@
+Test on Ubuntu14.04 on 7th Dec,2015 by LC
+SJTU - Computer Science
+
 #How-to install SimpleScalar on Ubuntu#
 [SimpleScalar](http://www.simplescalar.com/) is a VLIW processor simulator. It permits to access measures like execution time, caches misses, and branch mis-prediction rate. It is entirely scalable: cache size and type, number of UAL entities, branch predictor type are customizable. It may be used as a tool for understanding Design-Space-Exploration. Unfortunately, the installation is quite complex due to an outdated code source.
 
